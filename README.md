@@ -1,11 +1,11 @@
-About kinbot
-============
+About kinbot-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/kinbot-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/zadorlab/KinBot
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/kinbot-feedstock/blob/main/LICENSE.txt)
 
 Summary: Automated reaction pathway search for gas-phase molecules.
 

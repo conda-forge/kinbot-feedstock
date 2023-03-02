@@ -2,31 +2,31 @@
 {% set version = "2.1.1" %}
 
 package:
-    name: {{ name|lower }}
-    version: {{ version }}
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-    url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/kinbot-{{ version }}.tar.gz
-    sha256: 75f9373fe7932d3da585ef5e889b048d35d1a84a0a5b05788f694b6bbf08c3c4
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/kinbot-{{ version }}.tar.gz
+  sha256: 75f9373fe7932d3da585ef5e889b048d35d1a84a0a5b05788f694b6bbf08c3c4
 
 build:
-    noarch: python
-    script: {{ PYTHON }} -m pip install . -vv
-    number: 0
-    entry_points:
-        - kinbot = kinbot.kb:main
-        - pes = kinbot.pes:main
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
+  entry_points:
+    - kinbot = kinbot.kb:main
+    - pes = kinbot.pes:main
 
 requirements:
-    host:
-        - python >=3.8
-        - pip
-    run:
-        - python >=3.8
-        - numpy >=1.17.0
-        - ase >=3.19
-        - networkx
-        - rmsd >=1.5.1
+  host:
+    - python >=3.8
+    - pip
+  run:
+    - python >=3.8
+    - numpy >=1.17.0
+    - ase >=3.19
+    - networkx
+    - rmsd >=1.5.1
 
 test:
   imports:
@@ -37,21 +37,21 @@ test:
     - pip
 
 about:
-    home: https://github.com/zadorlab/KinBot
-    license: BSD-3-Clause
-    license_family: BSD
-    license_file: LICENSE
-    summary: Automated reaction pathway search for gas-phase molecules.
+  home: https://github.com/zadorlab/KinBot
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: Automated reaction pathway search for gas-phase molecules.
 
-    description: |
-        KinBot is an automated gas-phase kinetics workflow code that drives
-        electronic structure calculations on a chemical PES and characterizes
-        the chemically relevant stationary points to finally create a complete
-        master equation formulation of the chemical kinetic system.
-    doc_url: https://github.com/zadorlab/KinBot/wiki
-    dev_url: https://github.com/zadorlab/KinBot
+  description: |
+    KinBot is an automated gas-phase kinetics workflow code that drives
+    electronic structure calculations on a chemical PES and characterizes
+    the chemically relevant stationary points to finally create a complete
+    master equation formulation of the chemical kinetic system.
+  doc_url: https://github.com/zadorlab/KinBot/wiki
+  dev_url: https://github.com/zadorlab/KinBot
 
 extra:
-    recipe-maintainers:
-        - juditzador
-        - cmartia
+  recipe-maintainers:
+    - juditzador
+    - cmartia
