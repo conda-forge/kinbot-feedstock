@@ -26,8 +26,7 @@ requirements:
     - numpy >=1.17.0
     - ase >=3.19
     - networkx
-    - rmsd
-    - typing_extensions
+    - rmsd >=1.5.1
 
 test:
   imports:
