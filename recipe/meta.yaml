@@ -1,5 +1,5 @@
 {% set name = "kinbot" %}
-{% set version = "2.2.1" %}
+{% set version = "2.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -54,4 +54,3 @@ about:
 extra:
   recipe-maintainers:
     - juditzador
-    - cmartia
