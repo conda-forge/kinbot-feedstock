@@ -28,6 +28,7 @@ requirements:
     - ase >=3.19
     - networkx
     - rmsd >=1.5.1
+    - sella
 
 test:
   imports:
