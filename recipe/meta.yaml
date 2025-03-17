@@ -1,5 +1,6 @@
 {% set name = "kinbot" %}
 {% set version = "2.2.4" %}
+{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
@@ -12,18 +13,18 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - kinbot = kinbot.kb:main
     - pes = kinbot.pes:main
 
 requirements:
   host:
-    - python 3.8
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - numpy >=1.17.0
     - ase >=3.19,<3.23.0
     - networkx
@@ -37,7 +38,7 @@ test:
     - pip check
   requires:
     - pip
-    - python 3.8
+    - python {{ python_min }}
 
 about:
   home: https://github.com/zadorlab/KinBot
