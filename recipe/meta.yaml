@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/kinbot-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/kinbot-{{ version }}.tar.gz
   sha256: 26c9effa8635cc2e4ce8158f870846712214244b714c4e577dc8c9725cda55f1
 
 build:
@@ -19,7 +19,7 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python 3.8
     - pip
     - setuptools
   run:
@@ -37,6 +37,7 @@ test:
     - pip check
   requires:
     - pip
+    - python 3.8
 
 about:
   home: https://github.com/zadorlab/KinBot
