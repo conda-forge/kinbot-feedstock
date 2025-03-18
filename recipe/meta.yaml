@@ -1,5 +1,6 @@
 {% set name = "kinbot" %}
-{% set version = "2.2.3" %}
+{% set version = "2.2.4a" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/kinbot-{{ version }}.tar.gz
-  sha256: 26c9effa8635cc2e4ce8158f870846712214244b714c4e577dc8c9725cda55f1
+  sha256: 7f7ba5ab863ca9f61419b221209d66a7656f0be52590cb816ae7a2dd909954e9
 
 build:
   noarch: python
