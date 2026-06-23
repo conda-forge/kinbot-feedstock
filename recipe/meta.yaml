@@ -1,5 +1,6 @@
 {% set name = "kinbot" %}
-{% set version = "2.2.3" %}
+{% set version = "2.3.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/kinbot-{{ version }}.tar.gz
-  sha256: 26c9effa8635cc2e4ce8158f870846712214244b714c4e577dc8c9725cda55f1
+  sha256: 23d0db17d24295bb1e4f5b7444f2c5f5dd797f966dc5d578e82aa2b4441075ba
 
 build:
   noarch: python
@@ -25,10 +26,10 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy >=1.17.0
-    - ase >=3.19,<3.23.0
+    - ase >=3.26
     - networkx
     - rmsd >=1.5.1
-    - sella
+    - sella >=2.5.0
 
 test:
   imports:
